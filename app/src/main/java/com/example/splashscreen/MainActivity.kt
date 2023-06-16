@@ -1,6 +1,7 @@
 package com.example.splashscreen
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,11 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        window.statusBarColor = Color.parseColor("#F7E64F")
+
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this,Home::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
             finish()
-        },3000)
+        }, 3000)
 
     }
 }
